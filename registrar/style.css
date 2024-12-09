@@ -1,0 +1,77 @@
+/* Agregamos el color de fondo rosa pastel al contenedor del formulario */
+.form-container {
+  background-color: #f8d7da;
+  /* Rosa pastel */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.fresas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fresa {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  animation: moverFresa 6s ease-in-out infinite;
+}
+
+.fresa:nth-child(1) {
+  left: 5%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.fresa:nth-child(2) {
+  left: 25%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.fresa:nth-child(3) {
+  left: 50%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.fresa:nth-child(4) {
+  left: 75%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+/* Animación para el movimiento de fresas */
+@keyframes moverFresa {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(600px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

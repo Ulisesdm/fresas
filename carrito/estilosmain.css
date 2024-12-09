@@ -1,0 +1,43 @@
+/* Fondos de colores intensos */
+.bg-light-blue {
+    background-color: #31d2c8; /* Azul intenso */
+    color: #212529;
+}
+
+.bg-light-green {
+    background-color: #fcf21c; /* Verde intenso */
+    color: #000000;
+}
+
+.bg-light-yellow {
+    background-color: #f6bde6; /* Amarillo intenso */
+    color: #212529;
+}
+
+/* Fondos de imagen */
+.bg-image-parent {
+    background-image: url('../img/fondo_padres.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.bg-image-teacher {
+    background-image: url('../img/fondo_docentes.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Transiciones para imágenes de equipo */
+.section-team img {
+    transition: transform 0.3s ease;
+}
+
+.section-team img:hover {
+    transform: scale(1.1);
+}

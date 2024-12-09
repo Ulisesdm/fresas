@@ -1,0 +1,149 @@
+/* Contenedor principal */
+main>.container {
+  padding: 80px 0;
+}
+
+/* Colores base */
+:root {
+  --dark-color: #333;
+  /* Fondo oscuro para footer */
+  --light-bg: #f4f4f4;
+  /* Fondo claro general */
+  --text-color: #444;
+  /* Color de texto */
+}
+
+/* Estilos generales */
+body {
+  background-color: var(--light-bg);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Barra de Navegación */
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Footer Moderno */
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 40px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.footer h5 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.footer a {
+  color: #ddd;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Estilos de Tarjetas */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  /* Estado inicial para fade-in */
+  transform: translateY(20px);
+  /* Desplazado hacia abajo inicialmente */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Configura la animación */
+}
+
+/* Efecto fade-in cuando la tarjeta es visible */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card img {
+  max-width: 100%; /* Ajusta el ancho al máximo disponible */
+  max-height: 200px; /* Ajusta la altura máxima */
+  object-fit: cover; /* Asegura que la imagen no se recorte y mantenga su proporción */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+.card .card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card h5 {
+  color: var(--text-color);
+}
+
+/* Botones con animación */
+.btn:hover {
+  transform: scale(1.05);
+  /* Agranda el botón un 5% */
+  background-color: #cf46a8;
+  /* Cambia a un rosita en hover */
+  color: #000000;
+  /* Cambia el color del texto a negro */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para el botón flotante (pop-out) */
+.popout-btn {
+  position: fixed;
+  /* Fijo en la pantalla */
+  bottom: 20px;
+  /* 20px desde el borde inferior */
+  right: 20px;
+  /* 20px desde el borde derecho */
+  background-color: #ff5722;
+  /* Color de fondo del botón */
+  color: white;
+  /* Color del texto del botón */
+  border: none;
+  /* Sin borde */
+  border-radius: 50%;
+  /* Hacer el botón redondo */
+  font-size: 24px;
+  /* Tamaño de la fuente */
+  padding: 15px;
+  /* Espaciado interno */
+  cursor: pointer;
+  /* Hacerlo clickeable */
+  z-index: 9999;
+  /* Asegurarnos de que esté sobre otros elementos */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra para darle un efecto flotante */
+}
+
+/* Estilo adicional para el botón flotante cuando el mouse pasa sobre él */
+.popout-btn:hover {
+  background-color: #e64a19;
+  /* Cambiar el color al pasar el mouse */
+  transform: scale(1.1);
+  /* Hacerlo un poco más grande */
+  transition: 0.3s;
+  /* Suavizar el efecto */
+}

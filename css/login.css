@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Contenedor general del login */
+.login-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Título */
+.login-container h1 {
+  font-size: 30px;
+  color: #d83131;  /* Color similar a fresas */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Campos del formulario */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+/* Botón de enviar */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #c0392b;
+}
+
+/* Fresas animadas */
+.fresas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.fresa {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  animation: moverFresa 6s ease-in-out infinite;
+}
+
+.fresa:nth-child(1) {
+  left: 5%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.fresa:nth-child(2) {
+  left: 25%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.fresa:nth-child(3) {
+  left: 50%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.fresa:nth-child(4) {
+  left: 75%;
+  background-image: url('../img/fresa.gif');
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+/* Animación para el movimiento de fresas */
+@keyframes moverFresa {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(600px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
